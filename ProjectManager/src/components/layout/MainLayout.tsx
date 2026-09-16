@@ -1,17 +1,16 @@
-import { SidebarProvider } from "../ui/sidebar";
+import { SidebarInset, SidebarProvider } from "../ui/sidebar";
 import Header from "./Header";
 import AppSidebar from "./Sidebar";
 
 const MainLayout = () => {
     return (
-        <div className="bg-gradient-to-br from-background to-muted">
-            
+        <div className="min-h-svh bg-gradient-to-br from-background to-muted">
             <SidebarProvider>
                 <AppSidebar />
 
-                <main>
+                <SidebarInset>
                     <Header />
-                </main>
+                </SidebarInset>
             </SidebarProvider>
             
             <footer className="border-t backdrop-blur">

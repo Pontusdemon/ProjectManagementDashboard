@@ -46,11 +46,9 @@ const AppSidebar = () => {
                         <SidebarMenu>
                             {mainNavigation.map((item) => (
                                 <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuButton>
-                                        <NavLink to="/">
-                                            {/*<item.icon />*/}
-                                            <span>{item.title}</span>
-                                        </NavLink>
+                                    <SidebarMenuButton render={<NavLink to={item.url} />}>
+                                        {/*<item.icon />*/}
+                                        <span>{item.title}</span>
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
@@ -62,11 +60,9 @@ const AppSidebar = () => {
             <SidebarFooter>
                 <SidebarMenu>
                     <SidebarMenuItem>
-                        <SidebarMenuButton>
-                            <a href="">
-                                {/* <Settings /> */}
-                                <span>Settings</span>
-                            </a>
+                        <SidebarMenuButton render={<NavLink to="/settings" />}>
+                            {/* <Settings /> */}
+                            <span>Settings</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>
