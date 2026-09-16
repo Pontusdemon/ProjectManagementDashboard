@@ -1,10 +1,19 @@
+import { SidebarProvider } from "../ui/sidebar";
 import Header from "./Header";
+import AppSidebar from "./Sidebar";
 
 const MainLayout = () => {
     return (
         <div className="bg-gradient-to-br from-background to-muted">
+            
+            <SidebarProvider>
+                <AppSidebar />
 
-            <Header />
+                <main>
+                    <Header />
+                </main>
+            </SidebarProvider>
+            
             <footer className="border-t backdrop-blur">
                 <div className="container mx-auto px-4 py-12 text-center text-gray-400
                 supports-[backdrop-filter]:bg-background/60">
