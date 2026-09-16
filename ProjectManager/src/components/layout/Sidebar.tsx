@@ -1,4 +1,5 @@
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
+import { Settings, CheckSquare, FolderKanban, LayoutDashboard, Users } from "lucide-react";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
 import { NavLink } from "react-router";
 
 const AppSidebar = () => {
@@ -7,22 +8,22 @@ const AppSidebar = () => {
         {
             title: "Dashboard",
             url: "/",
-            //icon: LayoutDashboard,
+            icon: LayoutDashboard,
         },
         {
             title: "Projects",
             url: "/projects",
-            //icon: FolderKanban,
+            icon: FolderKanban,
         },
         {
             title: "Tasks",
             url: "/tasks",
-            //icon: CheckSquare,
+            icon: CheckSquare,
         },
         {
             title: "Members",
             url: "/members",
-            //icon: Users,
+            icon: Users,
         },
     ]
 
@@ -38,16 +39,13 @@ const AppSidebar = () => {
 
             <SidebarContent>
                 <SidebarGroup>
-                    <SidebarGroupLabel>
-                        Main
-                    </SidebarGroupLabel>
 
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {mainNavigation.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton render={<NavLink to={item.url} />}>
-                                        {/*<item.icon />*/}
+                                        <item.icon />
                                         <span>{item.title}</span>
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
@@ -61,7 +59,7 @@ const AppSidebar = () => {
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton render={<NavLink to="/settings" />}>
-                            {/* <Settings /> */}
+                            <Settings />
                             <span>Settings</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
