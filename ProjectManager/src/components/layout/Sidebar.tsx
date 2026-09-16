@@ -27,7 +27,7 @@ const AppSidebar = () => {
     ]
 
     return (
-        <Sidebar>
+        <Sidebar collapsible="none">
             <SidebarHeader>
                 <div className="px-2 py-2">
                     <span className="font-semibold">
