@@ -1,5 +1,5 @@
-import { Settings, CheckSquare, FolderKanban, LayoutDashboard, Users } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
+import { Settings, CheckSquare, FolderKanban, LayoutDashboard, Users, Icon } from "lucide-react";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
 import { NavLink } from "react-router";
 
 const AppSidebar = () => {
@@ -39,7 +39,10 @@ const AppSidebar = () => {
 
             <SidebarContent>
                 <SidebarGroup>
-
+                    <SidebarGroupLabel>
+                        Main
+                    </SidebarGroupLabel>
+                    
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {mainNavigation.map((item) => (
