@@ -28,7 +28,7 @@ const AppSidebar = () => {
     ]
 
     return (
-        <Sidebar collapsible="none">
+        <Sidebar collapsible="none" className="h-svh shrink-0">
             <SidebarHeader>
                 <div className="px-2 py-2">
                     <span className="font-semibold">
@@ -46,7 +46,7 @@ const AppSidebar = () => {
                     </SidebarGroupLabel>
                     
                     <SidebarGroupContent>
-                        <SidebarMenu>
+                        <SidebarMenu className="gap-1">
                             {mainNavigation.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton render={<NavLink to={item.url} />}>
@@ -60,7 +60,7 @@ const AppSidebar = () => {
                 </SidebarGroup>
             </SidebarContent>
 
-            <SidebarFooter>
+            <SidebarFooter className="mt-auto border-0 pb-5">
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton render={<NavLink to="/settings" />}>
