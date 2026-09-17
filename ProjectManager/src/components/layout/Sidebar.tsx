@@ -40,7 +40,9 @@ const AppSidebar = () => {
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel>
-                        Main
+                        <span>
+                            Main
+                        </span>
                     </SidebarGroupLabel>
                     
                     <SidebarGroupContent>
