@@ -1,13 +1,11 @@
 const Dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <div>
+            <div>header section for dahsbaord</div>
+            <div className="flex">project progreess section for dahsbaord</div>
+            <div>footer section for upcoming deadlines and recent activity</div>
+        </div>
     )
 }
 
 export default Dashboard;
-
-
-// in project add header section 
-// project progress section 
-//my tasks sectiobn 
-// footer section for upcoming deadlines and recent activity
